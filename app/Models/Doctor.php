@@ -7,5 +7,10 @@ use Illuminate\Database\Eloquent\Model;
 
 class Doctor extends Model
 {
+
+    public function patients(){
+        return $this->hasMany(Patient::class);
+    }
+   protected $guarded = [];
     use HasFactory;
 }

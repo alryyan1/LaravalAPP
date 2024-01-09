@@ -17,7 +17,7 @@ return new class extends Migration
             $table->string('name');
             $table->tinyInteger('age');
             $table->string('address');
-            $table->boolean('result_finished');
+            $table->string('phone');
             $table->timestamps();
         });
     }

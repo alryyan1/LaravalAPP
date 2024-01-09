@@ -1,0 +1,63 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+body{
+    background-image: linear-gradient(to right , #03A9F4,#009688);
+}
+.parent{
+    display: grid;
+    height: 80vh;
+    grid-template-columns: 0.2fr 1fr 1fr 1fr 1fr  0.2fr;
+}
+nav{
+    padding: 5px;
+    background-color: lightblue;
+}
+nav a {
+
+    color: black;
+    text-decoration: none;
+}
+nav li {
+    padding: 5px;
+    list-style-type: none;
+}
+
+nav ul {
+    padding: 5px;
+    display: flex;
+    font-size: 1.5rem;
+    justify-content: space-evenly;
+}
+
+nav li:hover{
+    border: 1px solid lightseagreen;
+    border-radius: 5px;
+    /* background-color: lightgreen; */
+}
+
+
+
+/* doctor form */
+form.doctor h3{
+ text-align: center;
+}
+form.doctor {
+    font-size: 1.3rem;
+    padding: 5px;
+}
+form.doctor input ,select {
+    margin-bottom: 10px;
+    width: 70%;
+}
+form.doctor .form-control{
+    display: flex;
+    justify-content: space-between;
+}
+form.doctor button {
+    width: 100%;
+}

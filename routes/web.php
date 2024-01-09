@@ -1,5 +1,7 @@
 <?php
 
+use App\Http\Controllers\DoctorController;
+use App\Http\Controllers\PatientController;
 use App\Http\Controllers\ProfileController;
 use Illuminate\Support\Collection;
 use Illuminate\Support\Facades\Route;
@@ -15,14 +17,16 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    $collection = collect([1,2,3])->reverse()->tap(function($otherCollection){
-        $otherCollection->each(function($val){
-            dump("in tap".$val);
-        });
-    });
-    // return view('welcome');
-});
 
+Route::view('/','home');
+//DOCTOR
 
+//1- SHOW
+Route::get('/new/doctor',[DoctorController::class,'index'])->name('new.doctor');
+Route::post('/new/doctor',[DoctorController::class,'store'])->name('save.doctor');
+Route::get('/doctor/list',[DoctorController::class,'show'])->name('doctor.list');
+
+//PATIENT
+
+Route::get('/new/patient',[PatientController::class,'index'])->name('new.patient');
 require __DIR__.'/auth.php';
