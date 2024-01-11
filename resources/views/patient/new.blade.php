@@ -10,7 +10,7 @@
             <label for="">الاسم</label>
         </div>
         <div class="form-control">
-            <select>
+            <select name="doctor">
                 @foreach ($doctors as $doctor)
                     <option value={{$doctor->id}}>{{$doctor->name}}</option> 
                 @endforeach
@@ -22,12 +22,14 @@
             <label for=""> الهاتف</label>
         </div>
         <div class="form-control">
-            <select name="specialist">
-                <option value="1">عمومي</option>
-                <option value="2">اخصائي</option>
-            </select>
-            <label for="">التخصص</label>
+            <input name="age" type="text">
+            <label for=""> العمر</label>
         </div>
+        <div class="form-control">
+            <input name="address" type="text">
+            <label for=""> العنوان</label>
+        </div>
+      
          <div class="btn-container">
                 <button>حفظ</button>
          </div>

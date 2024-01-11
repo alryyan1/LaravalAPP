@@ -35,9 +35,7 @@ nav ul {
 }
 
 nav li:hover{
-    border: 1px solid lightseagreen;
-    border-radius: 5px;
-    /* background-color: lightgreen; */
+    background-color: lightgreen;
 }
 
 
@@ -60,4 +58,10 @@ form.doctor .form-control{
 }
 form.doctor button {
     width: 100%;
+}
+
+
+.list ul{
+    list-style-type: none;
+
 }

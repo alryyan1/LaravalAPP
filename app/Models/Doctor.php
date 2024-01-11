@@ -8,9 +8,14 @@ use Illuminate\Database\Eloquent\Model;
 class Doctor extends Model
 {
 
-    public function patients(){
+    public function specialist()
+    {
+        return $this->belongsTo(Specialist::class);
+    }
+    public function patients()
+    {
         return $this->hasMany(Patient::class);
     }
-   protected $guarded = [];
+    protected $guarded = [];
     use HasFactory;
 }

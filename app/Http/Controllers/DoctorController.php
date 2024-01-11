@@ -7,6 +7,8 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Request as FacadesRequest;
 use Symfony\Component\HttpFoundation\Request as HttpFoundationRequest;
 use App\Models\Doctor;
+use Illuminate\Support\Facades\DB;
+
 class DoctorController extends Controller
 {
     public function index()  {
@@ -20,10 +22,12 @@ class DoctorController extends Controller
             'specialist_id' => $request->specialist,
         ]);
 
-        return redirect('/');
+        return redirect('/doctor/list');
     }
     public function show()  {
-       $doctors =  Doctor::all();
+    //    $doctors =  Doctor::all();
+       $doctors =   DB::table('doctors')->get();
+       // the method get return Illuminate/Support/Collection
 
        return view('doctor.list',[
         'doctors' => $doctors
